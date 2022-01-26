@@ -22,21 +22,6 @@ function Titulo(props) {
 }
 
 //Componente React
-/* function HomePage() {
-    // JSX
-    return (
-        <div>
-            <GlobalStyle />
-            <Titulo tag="h2">Boas vindas de volta!</Titulo>
-            <h2>Discord - Alura Matrix</h2>
-
-        </div>
-
-    )
-
-} */
-//export default HomePageexport 
-
 export default function PaginaInicial() {
     
   const [username, setUsername] = React.useState('rodrigoapmarques');
@@ -86,26 +71,13 @@ export default function PaginaInicial() {
                 {appConfig.name}
               </Text>
   
-              {/* <input 
-                  type="text" 
-                  value={username}
-                  onChange={function (event){
-                    //Onde está o valor  
-                    const valor = event.target.value;
-                    //Trocar o valor da variavel através do React
-                    setUsername(valor);
-                  }}
-              /> */}
-
               <TextField
                 value={username}
                 onChange={function (event){
                   //Onde está o valor  
                   const valor = event.target.value;
                   //Trocar o valor da variavel através do React
-                  if(valor.length > 2){
-                    setUsername(valor);
-                  }
+                  setUsername(valor);
                 }}
                 fullWidth
                 textFieldColors={{
